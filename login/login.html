@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="background"></div>
+
+  <div class="login-container">
+    <h2>Login</h2>
+    <form onsubmit="return handleLogin(event)">
+      <input type="text" name="username" placeholder="Username" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+  </div>
+
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+
+      const username = document.querySelector('input[name="username"]').value.trim();
+      const password = document.querySelector('input[name="password"]').value.trim();
+
+      // Hardcoded valid credentials
+      const validUsername = "user";
+      const validPassword = "1234";
+
+      if (username === validUsername && password === validPassword) {
+        Swal.fire({
+          title: `Welcome, ${username}!`,
+          text: 'You have successfully logged in.',
+          icon: 'success',
+          confirmButtonText: 'Continue'
+        });
+      } else {
+        Swal.fire({
+          title: 'Login Failed',
+          text: 'Invalid username or password.',
+          icon: 'error',
+          confirmButtonText: 'Try Again'
+        });
+      }
+
+      return false; // prevent form submission
+    }
+  </script>
+</body>
+</html>
