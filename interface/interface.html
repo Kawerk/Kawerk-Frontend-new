@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Trust</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="interface_style.css">
+</head>
+<body>
+  <header>
+    <div class="header-top">
+      <div class="logo">
+        <a href="interface.html">Auto Trust</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../interface/interface.html" class="active">Home</a></li>
+          <li><a href="../Used Cars/used_cars.html">Used Cars</a></li>
+          <li><a href="../New Cars/new_cars.html">New Cars</a></li>
+          <li><a href="../Sell/sell_your_car.html">Sell Your Car</a></li>
+          <li><a href="../About/About.html">About</a></li>
+          <li><a href="../login/login.html" class="login-button">Login</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-bottom">
+      <h1>Find Your Dream Car</h1>
+      <p>The best place to find your next car.</p>
+    </div>
+  </header>
+
+  <section class="banner">
+    <div class="banner-text">
+      <p>Shorten the road in less than 1 minute</p>
+      <h2>Sell your car faster than ever</h2>
+    </div>
+    <img src="https://img.icons8.com/ios-filled/100/road.png" alt="Road Illustration">
+  </section>
+
+  <section class="features">
+    <figure>
+      <img src="https://th.bing.com/th/id/OIP.Dp38QX8C7v3tJ1KJEaYQQgHaEK?rs=1&pid=ImgDetMain" alt="">
+      <figcaption></figcaption>
+    </figure>
+    <figure>
+      <img src="https://www.cars-directory.net/pics_specs/car/citroen/c1/4713/8_big.jpg" alt="">
+      <figcaption></figcaption>
+    </figure>
+    <figure>
+      <img src="https://www.topgear.com/sites/default/files/images/cars-road-test/carousel/2020/01/51f59258513e364652a836fa8c9a8031/t-roc_r-24636.jpg" alt="">
+      <figcaption></figcaption>
+    </figure>
+  </section>
+
+  <section class="container">
+    <div class="search-box">
+      <h3>Search for Cars</h3>
+      <select name="make">
+        <option value="">Select Make</option>
+        <option value="toyota">Toyota</option>
+        <option value="honda">Honda</option>
+        <option value="ford">Ford</option>
+        <option value="bmw">BMW</option>
+      </select>
+
+      <select name="model">
+        <option value="">Select Model</option>
+        <option value="camry">Camry</option>
+        <option value="civic">Civic</option>
+        <option value="mustang">Mustang</option>
+        <option value="x5">X5</option>
+      </select>
+
+      <input type="text" placeholder="Enter City">
+      <input type="text" placeholder="Max Price">
+
+      <button type="button">Search</button>
+    </div>
+
+    <div class="brands">
+      <a href="Hyundai_Collection.html">
+              <img src="../image/Hyundai.png" alt="Hyundai">
+      </a>
+      <img src="../image/KIA.png" alt="KIA">
+      <img src="../image/Chevrolet.png" alt="Chevrolet">
+      <img src="../image/Fiat.png" alt="Fiat">
+      <img src="../image/Citroen.png" alt="Citroen">
+      <img src="../image/Peugeot.png" alt="Peugeot">
+      <img src="../image/Audi.png" alt="Audi">
+      <img src="../image/BMW.png" alt="BMW">
+      <img src="../image/Ford.png" alt="Ford">
+      <img src="../image/Mercedes Benz.png" alt="Mercedes">
+      <img src="../image/MG.png" alt="MG">
+      <img src="../image/Toyota.png" alt="Toyota">
+      <img src="../image/Volkswagen.png" alt="Volkswagen">
+      <img src="../image/Skoda.png" alt="Skoda">
+      <img src="../image/Opel.png" alt="Opel">
+      <img src="../image/Mitsubishi.png" alt="Mitsubishi">
+      <img src="../image/Honda.png" alt="Honda">
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer_container">
+      <p>&copy; 2025 Auto Trust. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript to make search work -->
+  <script>
+    const sampleCars = [
+      { make: "toyota", model: "camry", city: "cairo", price: 500000 },
+      { make: "honda", model: "civic", city: "alexandria", price: 450000 },
+      { make: "ford", model: "mustang", city: "giza", price: 900000 },
+      { make: "bmw", model: "x5", city: "cairo", price: 1200000 }
+    ];
+
+    const searchBox = document.querySelector('.search-box');
+    const resultsContainer = document.getElementById('resultsContainer');
+
+    searchBox.querySelector('button').addEventListener('click', () => {
+      const make = searchBox.querySelector('select[name="make"]').value.toLowerCase();
+      const model = searchBox.querySelector('select[name="model"]').value.toLowerCase();
+      const city = searchBox.querySelector('input[placeholder="Enter City"]').value.toLowerCase();
+      const maxPrice = parseInt(searchBox.querySelector('input[placeholder="Max Price"]').value);
+
+      const filteredCars = sampleCars.filter(car => {
+        return (
+          (!make || car.make === make) &&
+          (!model || car.model === model) &&
+          (!city || car.city.includes(city)) &&
+          (!maxPrice || car.price <= maxPrice)
+        );
+      });
+
+      if (filteredCars.length > 0) {
+        resultsContainer.innerHTML = filteredCars.map(car => `
+          <div style="border:1px solid #ccc; padding:10px; margin:10px; border-radius:8px;">
+            <p><strong>Make:</strong> ${car.make.toUpperCase()}</p>
+            <p><strong>Model:</strong> ${car.model}</p>
+            <p><strong>City:</strong> ${car.city}</p>
+            <p><strong>Price:</strong> ${car.price} EGP</p>
+          </div>
+        `).join('');
+      } else {
+        resultsContainer.innerHTML = '<p>No cars found matching your criteria.</p>';
+      }
+    });
+  </script>
+</body>
+</html>

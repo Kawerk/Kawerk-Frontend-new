@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Hyundai Collection - Auto Trust</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .model-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .model-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        button {
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            transform: translateY(-2px);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-5xl w-full bg-white shadow-lg rounded-xl p-8 space-y-8">
+        <header class="text-center">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-4">Our Hyundai Collection</h1>
+            <p class="text-lg text-gray-600 mb-6">
+                Explore the latest Hyundai models available at Auto Trust in Egypt, combining innovative design, advanced technology, and reliable performance tailored for the Egyptian market.
+            </p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="model-card bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-md">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-3">Hyundai Elantra</h2>
+                <div class="w-full h-40 bg-gray-200 rounded-md mb-4 flex items-center justify-center text-gray-500 font-medium">
+                    [Image Placeholder: Elantra]
+                </div>
+                <p class="text-gray-700 mb-4">
+                    The Hyundai Elantra offers a sleek design, comfortable interior, and impressive fuel efficiency, making it perfect for urban driving.
+                </p>
+                <ul class="text-gray-600 text-sm mb-4 space-y-1">
+                    <li><strong class="font-medium">Engine:</strong> 1.6L or 2.0L Inline-4</li>
+                    <li><strong class="font-medium">Fuel Economy:</strong> Up to 18 km/liter</li>
+                    <li><strong class="font-medium">Seating:</strong> 5 passengers</li>
+                </ul>
+                <a href="#" class="inline-block bg-blue-600 text-white px-5 py-2 rounded-md font-bold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    View Details
+                </a>
+            </div>
+
+            <div class="model-card bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-md">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-3">Hyundai Tucson</h2>
+                <div class="w-full h-40 bg-gray-200 rounded-md mb-4 flex items-center justify-center text-gray-500 font-medium">
+                    [Image Placeholder: Tucson]
+                </div>
+                <p class="text-gray-700 mb-4">
+                    A versatile SUV, the Hyundai Tucson combines bold styling with advanced safety features and ample cargo space for all your adventures.
+                </p>
+                <ul class="text-gray-600 text-sm mb-4 space-y-1">
+                    <li><strong class="font-medium">Engine:</strong> 1.6L Turbo or 2.5L Inline-4</li>
+                    <li><strong class="font-medium">Fuel Economy:</strong> Approx. 15 km/liter</li>
+                    <li><strong class="font-medium">Seating:</strong> 5 passengers</li>
+                </ul>
+                <a href="#" class="inline-block bg-blue-600 text-white px-5 py-2 rounded-md font-bold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    View Details
+                </a>
+            </div>
+
+            <div class="model-card bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-md">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-3">Hyundai Santa Fe</h2>
+                <div class="w-full h-40 bg-gray-200 rounded-md mb-4 flex items-center justify-center text-gray-500 font-medium">
+                    [Image Placeholder: Santa Fe]
+                </div>
+                <p class="text-gray-700 mb-4">
+                    The Hyundai Santa Fe offers a spacious interior, refined performance, and premium comfort, ideal for families and long journeys.
+                </p>
+                <ul class="text-gray-600 text-sm mb-4 space-y-1">
+                    <li><strong class="font-medium">Engine:</strong> 2.5L Inline-4 or 3.5L V6</li>
+                    <li><strong class="font-medium">Fuel Economy:</strong> Approx. 12 km/liter</li>
+                    <li><strong class="font-medium">Seating:</strong> 6-7 passengers</li>
+                </ul>
+                <a href="#" class="inline-block bg-blue-600 text-white px-5 py-2 rounded-md font-bold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    View Details
+                </a>
+            </div>
+
+            <div class="model-card bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-md">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-3">Hyundai Creta</h2>
+                <div class="w-full h-40 bg-gray-200 rounded-md mb-4 flex items-center justify-center text-gray-500 font-medium">
+                    [Image Placeholder: Creta]
+                </div>
+                <p class="text-gray-700 mb-4">
+                    The Hyundai Creta is a compact SUV known for its dynamic design, advanced features, and comfortable ride, perfect for city and highway.
+                </p>
+                <ul class="text-gray-600 text-sm mb-4 space-y-1">
+                    <li><strong class="font-medium">Engine:</strong> 1.5L or 1.6L Inline-4</li>
+                    <li><strong class="font-medium">Fuel Economy:</strong> Up to 17 km/liter</li>
+                    <li><strong class="font-medium">Seating:</strong> 5 passengers</li>
+                </ul>
+                <a href="#" class="inline-block bg-blue-600 text-white px-5 py-2 rounded-md font-bold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    View Details
+                </a>
+            </div>
+
+            <div class="model-card bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-md">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-3">Hyundai Venue</h2>
+                <div class="w-full h-40 bg-gray-200 rounded-md mb-4 flex items-center justify-center text-gray-500 font-medium">
+                    [Image Placeholder: Venue]
+                </div>
+                <p class="text-gray-700 mb-4">
+                    The Hyundai Venue is a stylish and compact SUV, perfect for urban adventures with its nimble handling and smart features.
+                </p>
+                <ul class="text-gray-600 text-sm mb-4 space-y-1">
+                    <li><strong class="font-medium">Engine:</strong> 1.0L Turbo or 1.2L Inline-4</li>
+                    <li><strong class="font-medium">Fuel Economy:</strong> Up to 19 km/liter</li>
+                    <li><strong class="font-medium">Seating:</strong> 5 passengers</li>
+                </ul>
+                <a href="#" class="inline-block bg-blue-600 text-white px-5 py-2 rounded-md font-bold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    View Details
+                </a>
+            </div>
+
+            <div class="model-card bg-gray-50 border border-gray-200 rounded-lg p-6 shadow-md">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-3">Hyundai Palisade</h2>
+                <div class="w-full h-40 bg-gray-200 rounded-md mb-4 flex items-center justify-center text-gray-500 font-medium">
+                    [Image Placeholder: Palisade]
+                </div>
+                <p class="text-gray-700 mb-4">
+                    The Hyundai Palisade is a premium SUV offering luxurious comfort, advanced technology, and spacious seating for larger families.
+                </p>
+                <ul class="text-gray-600 text-sm mb-4 space-y-1">
+                    <li><strong class="font-medium">Engine:</strong> 3.8L V6</li>
+                    <li><strong class="font-medium">Fuel Economy:</strong> Approx. 10 km/liter</li>
+                    <li><strong class="font-medium">Seating:</strong> 7-8 passengers</li>
+                </ul>
+                <a href="#" class="inline-block bg-blue-600 text-white px-5 py-2 rounded-md font-bold hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+                    View Details
+                </a>
+            </div>
+        </main>
+
+        <div class="text-center mt-8">
+            <a href="#" class="inline-block bg-gray-700 text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50">
+                Back to New Cars
+            </a>
+        </div>
+    </div>
+
+    <footer class="mt-8 text-center text-gray-500 text-sm">
+        <p>© 2025 Auto Trust. All rights reserved.</p>
+    </footer>
+</body>
+</html>
